@@ -1,0 +1,10 @@
+<script>
+function getRandom(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+}
+document.getElementById('display').textContent = Array.from({length:5}, (v,i)=>String.fromCharCode(getRandom('あ'.charCodeAt(0), 'ん'.charCodeAt(0)))).join('');
+</script>
+<button onclick="generateRandom()">らんだむ</button>
+<p id="display"></p>
